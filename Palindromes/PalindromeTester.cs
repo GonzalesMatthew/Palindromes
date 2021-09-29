@@ -9,13 +9,19 @@ namespace Palindromes
 {
     public class PalindromeTester
     {
-        public string Test(string stringToTest)
+        public bool Test(string stringToTest)
         {
+            
             string str = Regex.Replace(stringToTest.ToLower(), @"\s", "");
             str = Regex.Replace(str, @"[^0-9a-zA-Z]+", "");
             char[] charArray = str.ToCharArray();
             Array.Reverse(charArray);
-            return new string(charArray);
+
+            if (new string(charArray) == str)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
