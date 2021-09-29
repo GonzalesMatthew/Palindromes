@@ -12,6 +12,7 @@ namespace Palindromes
         public string Test(string stringToTest)
         {
             string str = Regex.Replace(stringToTest.ToLower(), @"\s", "");
+            str = Regex.Replace(str, @"[^0-9a-zA-Z]+", "");
             char[] charArray = str.ToCharArray();
             Array.Reverse(charArray);
             return new string(charArray);

@@ -47,6 +47,7 @@ namespace Palindromes.test
         [Theory]
         [InlineData("race car", "racecar")]
         [InlineData("No X IN NIXON", "noxinnixon")]
+        [InlineData("O, a kakao!","oakakao")]
         public void test_if_a_given_string_is_a_palindrome(string input, string expectedResult)
         {
             //arrange
